@@ -34,11 +34,10 @@ jobs:
             git diff
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
-        env:
-          GITHUB_TOKEN: ${{ secrets.MLCOMMONS_BOT_CLA_TOKEN }}
         with:
           author_name: GitHub Actions
           author_email: actions@github.com
           message: Release ${{ env.RELEASE_TAG }}
           add: "['VERSION', 'proto.lock']"
           push: "-o ci.skip"
+          github_token: ${{ secrets.MLCOMMONS_BOT_CLA_TOKEN }}
