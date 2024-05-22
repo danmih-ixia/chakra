@@ -13,7 +13,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
-          token: github.token
+          token: ${{ github.token }}
       - uses: actions/setup-python@v2
         with:
           python-version: 3.7
