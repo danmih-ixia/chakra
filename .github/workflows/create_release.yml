@@ -1,4 +1,4 @@
-name: Update version and publish release
+name: Create release and package
 on: 
     push:
         branches:
