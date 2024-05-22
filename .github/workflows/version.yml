@@ -28,6 +28,7 @@ jobs:
         run: |
             python3 version.py
             echo "RELEASE_TAG=$(cat VERSION)" >> $GITHUB_ENV
+            cat VERSION
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
