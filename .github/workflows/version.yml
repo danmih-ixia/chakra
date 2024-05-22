@@ -37,7 +37,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.MLCOMMONS_BOT_CLA_TOKEN }}
         with:
-          author_name: GitHub_Actions
+          author_name: GitHub Actions
           author_email: actions@github.com
           message: Release ${{ env.RELEASE_TAG }}
           add: "['VERSION', 'proto.lock']"
