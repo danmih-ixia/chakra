@@ -40,4 +40,4 @@ jobs:
           message: Release ${{ env.RELEASE_TAG }}
           add: "['VERSION', 'proto.lock']"
           push: "-o ci.skip"
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.TK }}
