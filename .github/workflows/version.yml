@@ -3,7 +3,11 @@ on:
     pull_request:
         branches:
             - main
-permissions: write-all
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  
 jobs:
   build:
     permissions: write-all
@@ -39,4 +43,4 @@ jobs:
           message: Release ${{ env.RELEASE_TAG }}
           add: "['VERSION', 'proto.lock']"
           push: "-o ci.skip"
-          github_token: ${{ secrets.TK }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
