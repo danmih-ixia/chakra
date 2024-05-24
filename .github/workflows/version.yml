@@ -41,6 +41,7 @@ jobs:
           author_name: GitHub Actions
           author_email: actions@github.com
           message: Release ${{ env.RELEASE_TAG }}
+          commit: --amend
           add: "['VERSION', 'proto.lock']"
-          push: "-o ci.skip"
+          push: "--force -o ci.skip"
           github_token: ${{ secrets.GITHUB_TOKEN }}
