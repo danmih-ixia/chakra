@@ -63,6 +63,3 @@ exclude = [
 ]
 reportMissingImports = false
 reportAttributeAccessIssue = false
-
-[tool.setuptools.dynamic]
-version = {file = ["VERSION"]}
